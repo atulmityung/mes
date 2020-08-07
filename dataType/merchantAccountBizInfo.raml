@@ -1,0 +1,27 @@
+#%RAML 1.0 DataType
+type: object
+description: Merchant Account Biz Info
+properties:
+  bizAddress:
+    type: array
+    items:
+      type: address
+    required: false
+  bizChecking:
+    type: merchantAccountBizInfoBizChecking
+    required: false
+  bizContact:
+    type: merchantAccountBizInfoBizContact
+    required: false
+  bizDescription:
+    type: merchantAccountBizInfoBizDescription
+  bizName:
+    type: merchantAccountBizInfoBizName
+    required: false
+  bizOwner:
+    type: array
+    items:
+      type: merchantAccountBizInfoBizOwner
+  history:
+    type: merchantAccountBizInfoHistory
+    required: false

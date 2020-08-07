@@ -1,0 +1,25 @@
+#%RAML 1.0 Trait
+description: Query Parameters to access database records
+queryParameters:
+  fields:
+    description: Comma delimited string of fields from the API to return
+  filter?:
+    description: !include ../description/queryParameters-filter.md
+    type: string
+    required: false
+    example:
+      "(merchant_number eq 12345 and account_charge_id eq 1111111 charge_account_type=ck and item_count eq 0 and dda=0000000000 and charge_type=aaa and merchant_control_number eq 10000000000 and date_created = 12/29/2000 and billing_frequency=nnnnnnnnnnny and is_enabled=y and statement_message=annual preservation and transit_routing eq  44444444 and charge_account_type=aa and created_by_id=id1234 and charge_subtype=cp and charge_amount eq = 10.10 and start_date=2000-12-01t00:00:00)"
+  offset?:
+    description: Number of records to offset by
+    type: number
+    required: false
+    example: 50
+  limit?:
+    description: Limit the number of records returned by the SAPI
+    type: number
+    required: false
+    example: 100
+  sort?:
+    description: "Comma delimited string of fields to specify the sorting criteria."
+    type: string
+    required: false

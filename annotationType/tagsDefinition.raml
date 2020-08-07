@@ -1,0 +1,14 @@
+#%RAML 1.0 AnnotationTypeDeclaration
+type: object
+allowedTargets: API
+description: Tags
+properties:
+  type: array
+  items:
+    properties:
+      name: string
+      description?: string
+      externalDocs?:
+        properties:
+          url: string
+          description?: string

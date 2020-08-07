@@ -1,0 +1,66 @@
+#%RAML 1.0 DataType
+type: object
+description: Merchant Account Pricing Fields Tranaction Charge Rates
+properties:
+  cardTypeCode:
+    type: string
+    enum:
+      - jcb
+      - ebt
+      - discover
+      - debitWithPin
+      - amexPassThroughRate
+      - amexBundleRate
+      - amexSeDirectRate
+      - vmcPassThroughRate
+      - vmcCreditQualifiedRate
+      - vmcDebitQualifiedRate
+      - visaCreditDiscountRate
+      - visaCheckDiscountRate
+      - visaBusinessDiscountRate
+      - masterCardCreditDiscountRate
+      - masterCardCheckDiscountRate
+      - masterCardBusinessDiscountRate
+  tranchrgDiscRate:
+    maximum: 999.999
+    type: number
+    format: double
+    required: false
+  tranchrgPassThru:
+    maximum: 999.99
+    type: number
+    format: double
+    required: false
+  tranchrgPerTran:
+    maximum: 99.99
+    type: number
+    format: double
+  tranchrgBrg?:
+    example: '00000'
+    type: string
+  tranchrgDiscrateType?:
+    type: string
+  amexOptbluePricingType:
+    type: integer
+  tranchrgAruFee?:
+    maximum: 99.999
+    type: number
+    format: double
+  tranchrgAvsFee?:
+    maximum: 99.999
+    type: number
+    format: double
+  tranchrgVoiceFee:
+    maximum: 99.999
+    type: number
+    format: double
+  tranchrgMminChrg:
+    maximum: 999.99
+    type: number
+    format: double
+  tranchrgPerAuth:
+    maximum: 99.99
+    type: number
+    format: double
+  pinDebitPassThru?:
+    type: string

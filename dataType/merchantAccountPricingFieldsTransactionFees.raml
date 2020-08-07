@@ -1,0 +1,40 @@
+#%RAML 1.0 DataType
+type: object
+description: Merchant Account Pricing Fields Transaction Fees
+properties:
+  amexAuthorizationFee:
+    maximum: 99.99
+    type: number
+    format: double
+  aruAuthFee?:
+    maximum: 99.999
+    type: number
+    format: double
+  avsFee?:
+    maximum: 99.999
+    type: number
+    format: double
+  voiceAuthFee:
+    maximum: 99.999
+    type: number
+    format: double
+  bankReferral:
+    maxLength: 5
+    type: string
+  interchangeBetMC?:
+    maxLength: 4
+    example: '5081'
+    type: string
+  interchangeBetVisa?:
+    maxLength: 4
+    example: '4081'
+    type: string
+  minimumDiscount:
+    maximum: 999.99
+    type: number
+    format: double
+  vmcAuthorizationFee:
+    maximum: 99.99
+    type: number
+    format: double
+  

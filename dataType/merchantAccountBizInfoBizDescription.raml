@@ -1,0 +1,60 @@
+#%RAML 1.0 DataType
+type: object
+description: Merchant Account Biz Info Biz Description
+properties:
+  billingCountryCode:
+    type: string
+    required: false
+  chainOrNonChain:
+    minimum: 1
+    maximum: 3
+    type: integer
+    format: int32
+    required: false
+  dateEstablished:
+    type: date-only
+    required: false
+    example: 1990-01-01
+  description:
+    maxLength: 200
+    type: string
+    required: false
+  industry:
+    maximum: 9999
+    type: integer
+    format: int32
+  location:
+    maximum: 99
+    type: integer
+    format: int32
+    required: false
+  merchantMCC:
+    type: integer
+    format: int32
+  numberOfLocations:
+    maximum: 999
+    type: integer
+    format: int32
+    required: false
+  ownershipTypeCode:
+    maximum: 99
+    type: integer
+    format: int32
+    required: false
+  promotionCode:
+    maxLength: 50
+    type: string
+    required: false
+  stateOfEntityFormationIncorporation:
+    maxLength: 2
+    type: string
+    required: false
+  website:
+    maxLength: 100
+    type: string
+    required: false
+  yearAtLocation:
+    maximum: 999
+    type: integer
+    format: int32
+    required: false

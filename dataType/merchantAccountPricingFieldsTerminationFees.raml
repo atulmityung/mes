@@ -1,0 +1,12 @@
+#%RAML 1.0 DataType
+type: object
+description: Merchant Account Pricing Fields Termination Fees
+properties:
+  termMonths:
+    maximum: 9999
+    type: integer
+    format: int32
+  termPenalty:
+    maximum: 99999.99
+    type: number
+    format: double

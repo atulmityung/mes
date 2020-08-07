@@ -1,0 +1,29 @@
+#%RAML 1.0 DataType
+type: object
+description: Merchant Account App info
+properties:
+  appScrTypeCode:
+    description: Application source
+    type: string
+  appCreatedDate:
+    description: Application date and time
+    type: string
+  appScrnCode:
+    description: Application screen code
+    type: string
+    required: false
+  appUserId:
+    description: Application repCode
+    type: string
+    required: false
+  appType:
+    type: integer
+    format: int32
+  screenSequenceId:
+    description: Application screen sequence id
+    type: string
+    required: false
+  appUserLogin:
+    description: Application logged in user, hardcoded to "mulesoft"
+    type: string
+    required: false

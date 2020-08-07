@@ -1,0 +1,28 @@
+#%RAML 1.0 DataType
+type: object
+description: Merchant address
+properties:
+  addressTypeCode:
+    type: integer
+  city:
+    maxLength: 50
+    type: string
+  name?:
+    type: Name
+    required: false
+  state:
+    maxLength: 2
+    type: string
+  street:
+    maxLength: 50
+    type: string
+  zipCode:
+    maxLength: 10
+    type: string
+  fax:
+    type: integer
+    format: int64
+    required: false
+  countryCode:
+    type: string
+    required: false

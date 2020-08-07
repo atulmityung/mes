@@ -1,0 +1,105 @@
+#%RAML 1.0 DataType
+type: object
+description: Merchant Account Merchant info
+properties:
+  merchBusinessName:
+    description: Merchant business name
+    type: string
+  merchFederalTaxId:
+    type: integer
+    format: int32
+    required: false
+  merchLegalName:
+    type: string
+    required: false
+  merchEmailAddress:
+    type: string
+  merchWebUrl:
+    type: string
+    required: false
+  customerServicePhone:
+    type: integer
+    format: int32
+  merchMailingName:
+    type: string
+    required: false
+  merchApplicationType:
+    type: integer
+  merchBusgoodservDescr:
+    type: string
+    required: false
+  industypeCode:
+    type: string
+  loctypeCode:
+    type: string
+  merchNumOfLocations:
+    type: integer
+    required: false
+  promotionCode:
+    type: string
+    required: false
+  bustypeCode:
+    type: integer
+    required: false
+  stateOfIncorporation:
+    type: string
+    required: false
+  businessWebAddress:
+    type: string
+    required: false
+  merchYearsAtLoc:
+    type: integer
+    required: false
+  merchBusinessEstablDate:
+    type: string
+    required: false
+  merchMcc:
+    type: integer
+    format: int32
+    required: false
+  merchPriorCcAccpFlag:
+    type: boolean
+    required: false
+  merchCcAcctTermFlag:
+    type: boolean
+    required: false
+  merchPriorProcessor:
+    type: string
+    required: false
+  merchPriorStatements:
+    type: boolean
+    required: false
+  merchTermReason:
+    type: string
+    required: false
+  merchInvgCode:
+    type: string
+    required: false
+  merchMetTableNumber:
+    type: integer
+    format: int32
+    required: false
+  terminalApplication:
+    type: string
+  vmcAcceptTypes:
+    type: integer
+    required: false
+  terminationMonths:
+    type: integer
+    required: false
+  terminationFee:
+    type: number
+    required: false
+  merchNotes:
+    type: string
+    required: false
+  merchAverageCcTran:
+    type: number
+    required: false
+  merchMonthVisaMcSales:
+    type: number
+    required: false
+  annualVmcSales:
+    type: number
+    required: false
+   

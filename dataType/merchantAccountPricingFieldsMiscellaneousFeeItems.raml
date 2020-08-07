@@ -1,0 +1,18 @@
+#%RAML 1.0 DataType
+type: object
+description: Merchant Account Pricing Fields Miscellaneous Fee Items
+properties:
+  miscCahrgeAmount:
+    maximum: 999.99
+    type: number
+    format: double
+  installmentPlan:
+    maximum: 99
+    type: integer
+    format: int32
+    required: false
+  miscCode:
+    minimum: 1
+    maximum: 97
+    type: integer
+    format: int32

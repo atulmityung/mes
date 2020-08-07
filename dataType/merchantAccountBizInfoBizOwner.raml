@@ -1,0 +1,32 @@
+#%RAML 1.0 DataType
+type: object
+description: Merchant Account Biz Info Biz Owner
+properties:
+  busownerDlDob:
+    type: string
+  ownerCitizenship:
+    type: string
+  busownerFirstName:
+    type: string
+    required: false
+  busownerLastName:
+    type: string
+    required: false
+  ownerSince:
+    type: date-only
+  busownerNum:
+    type: integer
+  busownerOwnerPerc:
+    minimum: 0
+    maximum: 100
+    type: number
+    format: double
+  busownerSsn:
+    maximum: 999999999
+    example: 412256218
+    type: integer
+    format: int64
+  busownerTitle:
+    maxLength: 40
+    type: string
+    required: false

@@ -1,0 +1,58 @@
+#%RAML 1.0 DataType
+type: object
+description: Merchant Account Info
+properties:
+  application:
+     type: merchantAccountAppInfo
+  merchant:
+    type: merchantAccountMerchantInfo
+  bizAddress:
+    type: array
+    items:
+      type: address
+  merchContact:
+    type: merchantAccountMerchContact
+  bizOwner:
+    type: array
+    items:
+      type: merchantAccountBizInfoBizOwner
+  bizOwnerAddress:
+    type: array
+    items:
+      type: address
+  merchBank:
+      type: merchantAccountBizInfoBizChecking
+  merchBankAddress:
+    type: address
+  creditContactInfo:
+    type: merchantAccountCreditContactInfo
+  creditReview:
+    type: merchantAccountCreditReview
+  equipment:
+    type: array
+    items:
+      type: merchantAccountEquipment
+  equipmentAddress:
+    type: address
+  posFeatures:
+    type: merchantAccountPosFeatures
+  paymentOptions:
+    type: array
+    items:
+      type: merchantAccountPaymentOptions
+  miscCharge:
+    type: array
+    items:
+      type: merchantAccountPricingFieldsMiscellaneousFeeItems
+  recCharge:
+    type: merchantAccountRecCharge
+  transactCharge:
+    type: array
+    items:
+      type: merchantAccountTransactionInfo
+  productSelection:
+    type: array
+    items:
+      type: merchantAccountProductSelection
+  siteInspection:
+    type: merchantAccountSiteInspection

@@ -1,0 +1,12 @@
+{
+  "main": "mes-sapi-oracle.raml",
+  "name": "sample - apinotebook",
+  "classifier": "raml",
+  "tags": [],
+  "publishWithRefFiles": true,
+  "groupId": "2b29558b-cf55-40b8-b856-e588737fd9c2",
+  "assetId": "sample-apinotebook",
+  "version": "0.0.1",
+  "apiVersion": "1.0.8",
+  "originalFormatVersion": "1.0"
+}

@@ -1,0 +1,104 @@
+#%RAML 1.0
+baseUri: https://anypoint.mulesoft.com/mocking/api/v1/links/1cf33ca5-3b59-434c-8aac-4968fe95730d/ # 
+title: MeS Oracle SAPI
+version: 1.0.8
+
+traits:
+  queryable: !include traits/trait-queryable.raml
+  error_response: !include traits/trait-error-response.raml
+
+types:
+  address: !include dataType/address.raml
+  merchantAccount: !include dataType/merchantAccount.raml
+  merchantAccountAppInfo: !include dataType/merchantAccountAppInfo.raml
+  merchantAccountMerchantInfo: !include dataType/merchantAccountMerchantInfo.raml
+  merchantAccountMerchContact: !include dataType/merchantAccountMerchContact.raml
+  merchantAccountCreditContactInfo: !include dataType/merchantAccountCreditContactInfo.raml
+  merchantAccountPosFeatures: !include dataType/merchantAccountPosFeatures.raml
+  merchantAccountRecCharge: !include dataType/merchantAccountRecCharge.raml
+  merchantAccountBizInfo: !include dataType/merchantAccountBizInfo.raml
+  merchantAccountBizInfoBizChecking: !include dataType/merchantAccountBizInfoBizChecking.raml
+  merchantAccountBizInfoBizContact: !include dataType/merchantAccountBizInfoBizContact.raml
+  merchantAccountBizInfoBizDescription: !include dataType/merchantAccountBizInfoBizDescription.raml
+  merchantAccountBizInfoBizName: !include dataType/merchantAccountBizInfoBizName.raml
+  merchantAccountBizInfoBizOwner: !include dataType/merchantAccountBizInfoBizOwner.raml
+  merchantAccountBizInfoHistory: !include dataType/merchantAccountBizInfoHistory.raml
+  merchantAccountCreditReview: !include dataType/merchantAccountCreditReview.raml
+  merchantAccountEquipment: !include dataType/merchantAccountEquipment.raml
+  merchantAccountEquipmentEquipmentLineItems: !include dataType/merchantAccountEquipmentEquipmentLineItems.raml
+  merchantAccountEquipmentTerminalFeature: !include dataType/merchantAccountEquipmentTerminalFeature.raml
+  merchantAccountPaymentOptions: !include dataType/merchantAccountPaymentOptions.raml
+  merchantAccountPaymentOptionsOtherCard: !include dataType/merchantAccountPaymentOptionsOtherCard.raml
+  merchantAccountPricingFields: !include dataType/merchantAccountPricingFields.raml
+  merchantAccountPricingFieldsMiscellaneousFeeItems: !include dataType/merchantAccountPricingFieldsMiscellaneousFeeItems.raml
+  merchantAccountPricingFieldsRecurringChargeFees: !include dataType/merchantAccountPricingFieldsRecurringChargeFees.raml
+  merchantAccountPricingFieldsTerminationFees: !include dataType/merchantAccountPricingFieldsTerminationFees.raml
+  merchantAccountPricingFieldsTranactionChargeRates: !include dataType/merchantAccountPricingFieldsTranactionChargeRates.raml
+  merchantAccountPricingFieldsTransactionFees: !include dataType/merchantAccountPricingFieldsTransactionFees.raml
+  merchantAccountProductSelection: !include dataType/merchantAccountProductSelection.raml
+  merchantAccountResponse: !include dataType/merchantAccountResponse.raml
+  merchantAccountSiteInspection: !include dataType/merchantAccountSiteInspection.raml
+  merchantAccountTransactionInfo: !include dataType/merchantAccountTransactionInfo.raml
+  Name: !include dataType/name.raml
+
+/views:
+  /{viewName}:
+    is: [queryable, error_response]
+    displayName: Get View Data
+    description: This is used to get data from an oracle view.
+    get:
+      description:  Get view records based on the criteria provided.
+      responses:
+        200:
+          body:
+            application/json:
+            
+/tables:
+  /{tableName}:
+    is: [queryable, error_response]
+    displayName: Get Table Data
+    description: This is used to get data from an oracle table.
+    get:
+      description:  Get table records based on the criteria provided.
+      responses:
+        200:
+          body:
+            application/json:
+
+/application:
+  post:
+    displayName: Create New Merchant in Oracle
+    body:
+      application/json:
+        description: The new merchant account JSON you want to post
+
+    responses:
+      200:
+        description: Create a new merchant account
+        body:
+          application/json:
+            type: merchantAccountResponse
+      201:
+        description: Created
+        body:
+          application/json:
+            type: merchantAccountResponse
+    
+/mesGetTestRecord/{appseqnum}:
+  get:
+    displayName: Get all inserted records as a package, by using unique appseqnum
+    responses:
+      200:
+        description: Inserted package
+        body:
+          application/json:
+            type: merchantAccount
+            
+/mesDeleteTestRecord/{appseqnum}:
+  delete:
+    displayName: Delete all inserted records from all tables, by using unique appseqnum
+    responses:
+      200:
+        description: Deleted rows
+        body:
+          application/json:

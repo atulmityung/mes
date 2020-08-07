@@ -1,0 +1,18 @@
+#%RAML 1.0 DataType
+type: object
+description: Merchant Account Biz Info Biz Name
+properties:
+    accountName:
+      maxLength: 25
+      example: John Doe
+      type: string
+    federalTaxpayerId:
+      minimum: 0
+      maximum: 999999999
+      example: 543210123
+      type: integer
+      format: int32
+    legalName:
+      maxLength: 50
+      example: John Fredrich Doe
+      type: string

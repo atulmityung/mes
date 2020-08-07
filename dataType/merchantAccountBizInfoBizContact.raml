@@ -1,0 +1,33 @@
+#%RAML 1.0 DataType
+type: object
+description: Mrchant Account Biz Info Biz Contact
+properties:
+  appEmail:
+    maxLength: 75
+    type: string
+    required: false
+  customerServicePhone:
+    maximum: 9999999999
+    type: integer
+    format: int64
+    required: false
+  extension:
+    type: string
+    required: false
+  fax:
+    maximum: 9999999999
+    type: integer
+    format: int64
+    required: false
+  name:
+    type: Name
+  phone:
+    type: integer
+    format: int64
+    required: false
+  title:
+    type: string
+  websiteUrl:
+    type: string
+    required: false
+  

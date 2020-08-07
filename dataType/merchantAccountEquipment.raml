@@ -1,0 +1,25 @@
+#%RAML 1.0 DataType
+type: object
+description: Merchant Account Equipment Equipment Line Items
+properties:
+  merchequipAmount:
+    maximum: 99999999.99
+    type: number
+    format: double
+    required: false
+  merchequipEquipQuantity:
+    maximum: 999
+    type: integer
+    format: int64
+  equipLendTypeCode:
+    type: integer
+    required: false
+  equipModel:
+    maxLength: 40
+    description: merchequipment.equip_model
+    type: string
+    required: false
+  equipTypeCode:
+    description: Terminal/Printer Sets, Terminal/Printer/Pinpad Sets, Terminal, Printers, Pinpads, Peripherals, Imprinters
+    type: integer
+    required: false

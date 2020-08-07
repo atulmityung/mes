@@ -1,0 +1,33 @@
+#%RAML 1.0 DataType
+type: object
+description: Merchant Account Pricing Fields Tranaction Charge Rates
+properties:
+  chargeType:
+    type: string
+    enum:
+      - jcb
+      - ebt
+      - discover
+      - debitWithPin
+      - amexPassThroughRate
+      - amexBundleRate
+      - amexSeDirectRate
+      - vmcPassThroughRate
+      - vmcCreditQualifiedRate
+      - vmcDebitQualifiedRate
+      - visaCreditDiscountRate
+      - visaCheckDiscountRate
+      - visaBusinessDiscountRate
+      - masterCardCreditDiscountRate
+      - masterCardCheckDiscountRate
+      - masterCardBusinessDiscountRate
+  discountRate:
+    maximum: 999.999
+    type: number
+    format: double
+    required: false
+  perItemPassThru:
+    maximum: 999.99
+    type: number
+    format: double
+    required: false
